@@ -1,0 +1,66 @@
+day 1
+-------------
+ip adress
+dns network flow
+NAT
+delecios case study
+SPOF
+multiple instace of service
+Load balancer
+load distribution algo - round robin , weighted round robin
+service rinning check - hearbeat, health check
+
+
+
+day 2
+------
+over loaded data
+sharding
+shard_key
+consistent hashing - db placing in ring, shard_key based hash , then strore the value to db
+
+
+day 3
+--------
+optimized consistent hashing - each db server place in multiple position in hash ring , other same
+    this for stopping cascading failure
+
+caching -
+   type
+   1. in browser caching
+   2. CDN
+   3. local caching
+   4. global cashing
+
+
+day 4
+-------
+problem regarding caching - 1) data inconsistency 2) space problem
+keeping data in sync -
+    1. TTL(Time to live)
+    2. Writing strategy ( i) write through  ii) write back/behind  iii) write around )
+
+tackle space problem -
+    1. LRU (least recently used) - remove the least used data
+    2. LFU (least frequently used) - remove the least used data
+    3. LRU-K - remove the least used data in last k time
+    4. FIFO - remove the first inserted data
+    5. Random - remove the random data
+
+interesting trick on keeping cache in sync - case study : leetcode, scaler code submission
+
+
+day 5
+--------
+leetcode, scaler code submission - test cases keeping upto date in cache
+    use versioning technique , keep timestamp of last update in db , and in cash keep the version(problem id + timestamp)
+    if version is not same then update the cache, from the file store
+    here db call will be there to check , but reduce heavy file call
+
+cointest leader board -
+    global cache with ttl , here data can be stale upto some time, but can not be shown different for different user
+
+
+facebook news feed -
+ cache with all users recent posts
+

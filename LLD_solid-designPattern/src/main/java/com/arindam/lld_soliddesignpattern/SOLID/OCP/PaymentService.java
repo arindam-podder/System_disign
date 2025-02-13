@@ -20,4 +20,10 @@ public class PaymentService {
     }
 
 
+    public static void main(String[] args) {
+        PaypalPayment obj = new PaypalPayment();
+        processPayment(obj, 1000);
+    }
+
+
 }
