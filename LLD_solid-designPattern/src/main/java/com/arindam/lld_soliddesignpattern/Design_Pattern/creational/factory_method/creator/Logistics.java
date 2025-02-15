@@ -4,5 +4,5 @@ import com.arindam.lld_soliddesignpattern.Design_Pattern.creational.factory_meth
 
 public interface Logistics {
     void planDelivery();
-    Transport createTransport();            //fctory method , subclasses will be the creator
+    Transport createTransport();            //factory method , subclasses will be the creator
 }
